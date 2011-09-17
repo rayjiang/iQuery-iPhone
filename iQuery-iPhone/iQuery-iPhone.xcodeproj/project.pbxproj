@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		713BDA3E1424EBF200514594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713BDA3D1424EBF200514594 /* UIKit.framework */; };
+		713BDA401424EBF200514594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713BDA3F1424EBF200514594 /* Foundation.framework */; };
+		713BDA421424EBF200514594 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713BDA411424EBF200514594 /* CoreGraphics.framework */; };
+		713BDA481424EBF200514594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA461424EBF200514594 /* InfoPlist.strings */; };
+		713BDA4A1424EBF200514594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA491424EBF200514594 /* main.m */; };
+		713BDA6A1424ED8A00514594 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA671424ED8A00514594 /* DataBase.m */; };
+		713BDA6B1424ED8A00514594 /* TrainScheduleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA691424ED8A00514594 /* TrainScheduleItem.m */; };
+		713BDA781424EDA900514594 /* ScheduleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA6C1424EDA900514594 /* ScheduleDetailCell.xib */; };
+		713BDA791424EDA900514594 /* ScheduleDetailTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA6E1424EDA900514594 /* ScheduleDetailTable.xib */; };
+		713BDA7A1424EDA900514594 /* ScheduleDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA701424EDA900514594 /* ScheduleDetailTableHeader.xib */; };
+		713BDA7B1424EDA900514594 /* ScheduleTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA721424EDA900514594 /* ScheduleTable.xib */; };
+		713BDA7C1424EDA900514594 /* ScheduleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA741424EDA900514594 /* ScheduleTableCell.xib */; };
+		713BDA7D1424EDA900514594 /* ScheduleTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA761424EDA900514594 /* ScheduleTableHeader.xib */; };
+		713BDA851424EDBF00514594 /* bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA7E1424EDBF00514594 /* bank.png */; };
+		713BDA861424EDBF00514594 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA7F1424EDBF00514594 /* Default.png */; };
+		713BDA871424EDBF00514594 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA801424EDBF00514594 /* Default@2x.png */; };
+		713BDA881424EDBF00514594 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA811424EDBF00514594 /* gear.png */; };
+		713BDA891424EDBF00514594 /* magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA821424EDBF00514594 /* magnify.png */; };
+		713BDA8A1424EDBF00514594 /* Train - 110804.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA831424EDBF00514594 /* Train - 110804.sqlite */; };
+		713BDA8B1424EDBF00514594 /* train.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA841424EDBF00514594 /* train.png */; };
+		713BDA921424EDD300514594 /* iQueryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA8D1424EDD300514594 /* iQueryAppDelegate.m */; };
+		713BDA931424EDD300514594 /* ScheduleDetailTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA8F1424EDD300514594 /* ScheduleDetailTable.m */; };
+		713BDA941424EDD300514594 /* ScheduleTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 713BDA911424EDD300514594 /* ScheduleTable.m */; };
+		713BDA971424EDF900514594 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 713BDA951424EDF900514594 /* libsqlite3.dylib */; };
+		713BDA981424EDF900514594 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713BDA961424EDF900514594 /* QuartzCore.framework */; };
+		713BDA9A1424EE1400514594 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA991424EE1300514594 /* Icon.png */; };
+		713BDA9C1424EE1C00514594 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA9B1424EE1C00514594 /* Icon@2x.png */; };
+		713BDA9F1424EFBB00514594 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713BDA9D1424EFBB00514594 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		713BDA391424EBF200514594 /* iQuery-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iQuery-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		713BDA3D1424EBF200514594 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		713BDA3F1424EBF200514594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		713BDA411424EBF200514594 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		713BDA451424EBF200514594 /* iQuery-iPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iQuery-iPhone-Info.plist"; sourceTree = "<group>"; };
+		713BDA471424EBF200514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		713BDA491424EBF200514594 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		713BDA4B1424EBF200514594 /* iQuery-iPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iQuery-iPhone-Prefix.pch"; sourceTree = "<group>"; };
+		713BDA661424ED8A00514594 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBase.h; path = DataBase/DataBase.h; sourceTree = "<group>"; };
+		713BDA671424ED8A00514594 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBase.m; path = DataBase/DataBase.m; sourceTree = "<group>"; };
+		713BDA681424ED8A00514594 /* TrainScheduleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainScheduleItem.h; path = DataBase/TrainScheduleItem.h; sourceTree = "<group>"; };
+		713BDA691424ED8A00514594 /* TrainScheduleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainScheduleItem.m; path = DataBase/TrainScheduleItem.m; sourceTree = "<group>"; };
+		713BDA6D1424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleDetailCell.xib; sourceTree = "<group>"; };
+		713BDA6F1424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleDetailTable.xib; sourceTree = "<group>"; };
+		713BDA711424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleDetailTableHeader.xib; sourceTree = "<group>"; };
+		713BDA731424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleTable.xib; sourceTree = "<group>"; };
+		713BDA751424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleTableCell.xib; sourceTree = "<group>"; };
+		713BDA771424EDA900514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScheduleTableHeader.xib; sourceTree = "<group>"; };
+		713BDA7E1424EDBF00514594 /* bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bank.png; path = Resource/bank.png; sourceTree = "<group>"; };
+		713BDA7F1424EDBF00514594 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resource/Default.png; sourceTree = "<group>"; };
+		713BDA801424EDBF00514594 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resource/Default@2x.png"; sourceTree = "<group>"; };
+		713BDA811424EDBF00514594 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = Resource/gear.png; sourceTree = "<group>"; };
+		713BDA821424EDBF00514594 /* magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = magnify.png; path = Resource/magnify.png; sourceTree = "<group>"; };
+		713BDA831424EDBF00514594 /* Train - 110804.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Train - 110804.sqlite"; path = "Resource/Train - 110804.sqlite"; sourceTree = "<group>"; };
+		713BDA841424EDBF00514594 /* train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = train.png; path = Resource/train.png; sourceTree = "<group>"; };
+		713BDA8C1424EDD300514594 /* iQueryAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQueryAppDelegate.h; sourceTree = "<group>"; };
+		713BDA8D1424EDD300514594 /* iQueryAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQueryAppDelegate.m; sourceTree = "<group>"; };
+		713BDA8E1424EDD300514594 /* ScheduleDetailTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDetailTable.h; sourceTree = "<group>"; };
+		713BDA8F1424EDD300514594 /* ScheduleDetailTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDetailTable.m; sourceTree = "<group>"; };
+		713BDA901424EDD300514594 /* ScheduleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTable.h; sourceTree = "<group>"; };
+		713BDA911424EDD300514594 /* ScheduleTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTable.m; sourceTree = "<group>"; };
+		713BDA951424EDF900514594 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		713BDA961424EDF900514594 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		713BDA991424EE1300514594 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		713BDA9B1424EE1C00514594 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		713BDA9E1424EFBB00514594 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		713BDA361424EBF200514594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713BDA971424EDF900514594 /* libsqlite3.dylib in Frameworks */,
+				713BDA981424EDF900514594 /* QuartzCore.framework in Frameworks */,
+				713BDA3E1424EBF200514594 /* UIKit.framework in Frameworks */,
+				713BDA401424EBF200514594 /* Foundation.framework in Frameworks */,
+				713BDA421424EBF200514594 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		713BDA2E1424EBF200514594 = {
+			isa = PBXGroup;
+			children = (
+				713BDA431424EBF200514594 /* iQuery-iPhone */,
+				713BDA3C1424EBF200514594 /* Frameworks */,
+				713BDA3A1424EBF200514594 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		713BDA3A1424EBF200514594 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA391424EBF200514594 /* iQuery-iPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		713BDA3C1424EBF200514594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA951424EDF900514594 /* libsqlite3.dylib */,
+				713BDA961424EDF900514594 /* QuartzCore.framework */,
+				713BDA3D1424EBF200514594 /* UIKit.framework */,
+				713BDA3F1424EBF200514594 /* Foundation.framework */,
+				713BDA411424EBF200514594 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		713BDA431424EBF200514594 /* iQuery-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA651424ED6200514594 /* DataBase */,
+				713BDA8C1424EDD300514594 /* iQueryAppDelegate.h */,
+				713BDA8D1424EDD300514594 /* iQueryAppDelegate.m */,
+				713BDA901424EDD300514594 /* ScheduleTable.h */,
+				713BDA911424EDD300514594 /* ScheduleTable.m */,
+				713BDA8E1424EDD300514594 /* ScheduleDetailTable.h */,
+				713BDA8F1424EDD300514594 /* ScheduleDetailTable.m */,
+				713BDA641424ED5800514594 /* Xib */,
+				713BDA631424ED4F00514594 /* Resource */,
+				713BDA441424EBF200514594 /* Supporting Files */,
+			);
+			path = "iQuery-iPhone";
+			sourceTree = "<group>";
+		};
+		713BDA441424EBF200514594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA451424EBF200514594 /* iQuery-iPhone-Info.plist */,
+				713BDA461424EBF200514594 /* InfoPlist.strings */,
+				713BDA491424EBF200514594 /* main.m */,
+				713BDA4B1424EBF200514594 /* iQuery-iPhone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		713BDA631424ED4F00514594 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA9B1424EE1C00514594 /* Icon@2x.png */,
+				713BDA991424EE1300514594 /* Icon.png */,
+				713BDA7E1424EDBF00514594 /* bank.png */,
+				713BDA7F1424EDBF00514594 /* Default.png */,
+				713BDA801424EDBF00514594 /* Default@2x.png */,
+				713BDA811424EDBF00514594 /* gear.png */,
+				713BDA821424EDBF00514594 /* magnify.png */,
+				713BDA831424EDBF00514594 /* Train - 110804.sqlite */,
+				713BDA841424EDBF00514594 /* train.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		713BDA641424ED5800514594 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA9D1424EFBB00514594 /* MainWindow.xib */,
+				713BDA6C1424EDA900514594 /* ScheduleDetailCell.xib */,
+				713BDA6E1424EDA900514594 /* ScheduleDetailTable.xib */,
+				713BDA701424EDA900514594 /* ScheduleDetailTableHeader.xib */,
+				713BDA721424EDA900514594 /* ScheduleTable.xib */,
+				713BDA741424EDA900514594 /* ScheduleTableCell.xib */,
+				713BDA761424EDA900514594 /* ScheduleTableHeader.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		713BDA651424ED6200514594 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				713BDA661424ED8A00514594 /* DataBase.h */,
+				713BDA671424ED8A00514594 /* DataBase.m */,
+				713BDA681424ED8A00514594 /* TrainScheduleItem.h */,
+				713BDA691424ED8A00514594 /* TrainScheduleItem.m */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		713BDA381424EBF200514594 /* iQuery-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713BDA601424EBF200514594 /* Build configuration list for PBXNativeTarget "iQuery-iPhone" */;
+			buildPhases = (
+				713BDA351424EBF200514594 /* Sources */,
+				713BDA361424EBF200514594 /* Frameworks */,
+				713BDA371424EBF200514594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iQuery-iPhone";
+			productName = "iQuery-iPhone";
+			productReference = 713BDA391424EBF200514594 /* iQuery-iPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		713BDA301424EBF200514594 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 713BDA331424EBF200514594 /* Build configuration list for PBXProject "iQuery-iPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 713BDA2E1424EBF200514594;
+			productRefGroup = 713BDA3A1424EBF200514594 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				713BDA381424EBF200514594 /* iQuery-iPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		713BDA371424EBF200514594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713BDA481424EBF200514594 /* InfoPlist.strings in Resources */,
+				713BDA781424EDA900514594 /* ScheduleDetailCell.xib in Resources */,
+				713BDA791424EDA900514594 /* ScheduleDetailTable.xib in Resources */,
+				713BDA7A1424EDA900514594 /* ScheduleDetailTableHeader.xib in Resources */,
+				713BDA7B1424EDA900514594 /* ScheduleTable.xib in Resources */,
+				713BDA7C1424EDA900514594 /* ScheduleTableCell.xib in Resources */,
+				713BDA7D1424EDA900514594 /* ScheduleTableHeader.xib in Resources */,
+				713BDA851424EDBF00514594 /* bank.png in Resources */,
+				713BDA861424EDBF00514594 /* Default.png in Resources */,
+				713BDA871424EDBF00514594 /* Default@2x.png in Resources */,
+				713BDA881424EDBF00514594 /* gear.png in Resources */,
+				713BDA891424EDBF00514594 /* magnify.png in Resources */,
+				713BDA8A1424EDBF00514594 /* Train - 110804.sqlite in Resources */,
+				713BDA8B1424EDBF00514594 /* train.png in Resources */,
+				713BDA9A1424EE1400514594 /* Icon.png in Resources */,
+				713BDA9C1424EE1C00514594 /* Icon@2x.png in Resources */,
+				713BDA9F1424EFBB00514594 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		713BDA351424EBF200514594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713BDA4A1424EBF200514594 /* main.m in Sources */,
+				713BDA6A1424ED8A00514594 /* DataBase.m in Sources */,
+				713BDA6B1424ED8A00514594 /* TrainScheduleItem.m in Sources */,
+				713BDA921424EDD300514594 /* iQueryAppDelegate.m in Sources */,
+				713BDA931424EDD300514594 /* ScheduleDetailTable.m in Sources */,
+				713BDA941424EDD300514594 /* ScheduleTable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		713BDA461424EBF200514594 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA471424EBF200514594 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		713BDA6C1424EDA900514594 /* ScheduleDetailCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA6D1424EDA900514594 /* en */,
+			);
+			name = ScheduleDetailCell.xib;
+			sourceTree = "<group>";
+		};
+		713BDA6E1424EDA900514594 /* ScheduleDetailTable.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA6F1424EDA900514594 /* en */,
+			);
+			name = ScheduleDetailTable.xib;
+			sourceTree = "<group>";
+		};
+		713BDA701424EDA900514594 /* ScheduleDetailTableHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA711424EDA900514594 /* en */,
+			);
+			name = ScheduleDetailTableHeader.xib;
+			sourceTree = "<group>";
+		};
+		713BDA721424EDA900514594 /* ScheduleTable.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA731424EDA900514594 /* en */,
+			);
+			name = ScheduleTable.xib;
+			sourceTree = "<group>";
+		};
+		713BDA741424EDA900514594 /* ScheduleTableCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA751424EDA900514594 /* en */,
+			);
+			name = ScheduleTableCell.xib;
+			sourceTree = "<group>";
+		};
+		713BDA761424EDA900514594 /* ScheduleTableHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA771424EDA900514594 /* en */,
+			);
+			name = ScheduleTableHeader.xib;
+			sourceTree = "<group>";
+		};
+		713BDA9D1424EFBB00514594 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713BDA9E1424EFBB00514594 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		713BDA5E1424EBF200514594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		713BDA5F1424EBF200514594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		713BDA611424EBF200514594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQuery-iPhone/iQuery-iPhone-Prefix.pch";
+				INFOPLIST_FILE = "iQuery-iPhone/iQuery-iPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		713BDA621424EBF200514594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQuery-iPhone/iQuery-iPhone-Prefix.pch";
+				INFOPLIST_FILE = "iQuery-iPhone/iQuery-iPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		713BDA331424EBF200514594 /* Build configuration list for PBXProject "iQuery-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713BDA5E1424EBF200514594 /* Debug */,
+				713BDA5F1424EBF200514594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713BDA601424EBF200514594 /* Build configuration list for PBXNativeTarget "iQuery-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713BDA611424EBF200514594 /* Debug */,
+				713BDA621424EBF200514594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 713BDA301424EBF200514594 /* Project object */;
+}
