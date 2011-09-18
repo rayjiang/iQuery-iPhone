@@ -15,8 +15,13 @@
     UINavigationController *_configQueryNavController;
     UISearchBar *_trainIdSearchBar;
     UISearchBar *_stationSearchBar;
+    UISearchBar *_beginStationSearchbar;
+    UISearchBar *_endStationSearchBar;
 }
 
+- (Boolean) doFromToStationQuery;
+- (IBAction)switchStations:(id)sender;
+- (IBAction)backgroundClick:(id)sender;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
@@ -28,5 +33,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *configQueryNavController;
 @property (nonatomic, retain) IBOutlet UISearchBar *trainIdSearchBar;
 @property (nonatomic, retain) IBOutlet UISearchBar *stationSearchBar;
+@property (nonatomic, retain) IBOutlet UISearchBar *beginStationSearchbar;
+@property (nonatomic, retain) IBOutlet UISearchBar *endStationSearchBar;
 
 @end

@@ -22,6 +22,8 @@
 @synthesize configQueryNavController = _configQueryNavController;
 @synthesize trainIdSearchBar = _trainIdSearchBar;
 @synthesize stationSearchBar = _stationSearchBar;
+@synthesize beginStationSearchbar = _beginStationSearchbar;
+@synthesize endStationSearchBar = _endStationSearchBar;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -87,6 +89,8 @@
     [_configQueryNavController release];
     [_trainIdSearchBar release];
     [_stationSearchBar release];
+    [_beginStationSearchbar release];
+    [_endStationSearchBar release];
     [super dealloc];
 }
 
@@ -134,12 +138,48 @@
         scheduleTable.scheduleInfo = [[DataBase sharedDataBase] queryScheduleByStation:[searchBar text]];
         [self.stationQueryNavController pushViewController:scheduleTable animated:YES];
     }
+    else if(searchBar == self.beginStationSearchbar) {
+        if(![self doFromToStationQuery])
+            [self.endStationSearchBar becomeFirstResponder];
+    }
+    else if(searchBar == self.endStationSearchBar) {
+        if(![self doFromToStationQuery])
+            [self.beginStationSearchbar becomeFirstResponder];
+    }
 }  
 
 //cancel button clicked...  
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {  
     [searchBar resignFirstResponder];
+}
+
+- (IBAction)switchStations:(id)sender {
+    NSString *beginStation = self.beginStationSearchbar.text;
+    self.beginStationSearchbar.text = self.endStationSearchBar.text;
+    self.endStationSearchBar.text = beginStation;
+    
+    [self doFromToStationQuery];
+}
+
+- (IBAction)backgroundClick:(id)sender {
+    // Close keyboard
+    [self.beginStationSearchbar resignFirstResponder];
+    [self.endStationSearchBar resignFirstResponder];
+    [self.trainIdSearchBar resignFirstResponder];
+    [self.stationSearchBar resignFirstResponder];
+}
+
+- (Boolean) doFromToStationQuery
+{
+    if([self.beginStationSearchbar.text length] > 0 && [self.endStationSearchBar.text length] > 0) {
+        ScheduleTable *scheduleTable = [[[ScheduleTable alloc] initWithNibName:@"ScheduleTable" bundle:nil] autorelease];
+        scheduleTable.title = [NSString stringWithFormat:@"%@ - %@", self.beginStationSearchbar.text, self.endStationSearchBar.text];
+        scheduleTable.scheduleInfo = [[DataBase sharedDataBase] queryScheduleByFromToStation:self.beginStationSearchbar.text toStation:self.endStationSearchBar.text];
+        [self.ssQueryNavController pushViewController:scheduleTable animated:YES];
+        return YES;
+    }
+    return NO;
 }
 
 @end
